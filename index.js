@@ -30,15 +30,15 @@ function callApi(ciudad){
             showWeather(responseJson)
             form.reset();
         }
-    // console.log(responseJson);
+    console.log(responseJson);
     })
 
 }
 
 function showWeather(data){
-    const {name, main:{temp, temp_min, temp_max}, weather:[array]}= data;
+    const {name, main:{temp, temp_min, temp_max},sys:{country} , weather:[array]}= data;
     const urlImage= `https://openweathermap.org/img/wn/${array.icon}@2x.png`
-    
+    console.log(country);
     const tempReal = parseInt(temp-273.15);
     const tempMa = parseInt(temp_max-273.15+1);
     const tempMi = parseInt(temp_min-273.15-1);
@@ -48,6 +48,9 @@ function showWeather(data){
 
     const title = document.createElement("h3");
     title.textContent = name;
+
+    const ciudad = document.createElement("h4");
+    ciudad.textContent = "País: " + country;
 
     const tempActual = document.createElement("h2");
     tempActual.textContent = tempReal + "°C";
@@ -62,7 +65,7 @@ function showWeather(data){
     image.src = urlImage;
 
     
-    container.append(title,tempActual, tempMax,tempMin, image);
+    container.append(title,ciudad, tempActual, tempMax,tempMin, image);
     appNode.appendChild(container);
 
 
