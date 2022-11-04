@@ -4,7 +4,7 @@
   "description": "Esta app web trabaja trae la información de un API para poder tener el clima en tiempo real.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "dependencies": {
     "node-fetch": "^3.2.10",
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
