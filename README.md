@@ -5,8 +5,8 @@ Proyecto practico de manejo del dom
 Esta app web trabaja trae la información de un API para poder tener el clima en tiempo real de una o varias ciudades.
 
 #### Características:
--Peticiones para traer informacion de APi del clima
--Diseño de Pagina con CSS
+- Peticiones para traer informacion de APi del clima
+- Diseño de Pagina con CSS
 #### Tecnologias:
 - HTML
 - Javascript
